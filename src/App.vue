@@ -1,32 +1,28 @@
 <template>
-  <div class="w-screen">
-    <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-    <h1 class="text-3xl font-bold text-green-500">Welcome to Your Vue.js App</h1>
+  <Header></Header>
+  <main class="w-screen">
     <div class="flex">
       <Folder name="app" />
-      <Folder name="app" />
+      <Folder name="code" />
+      <File name="test.js" />
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-import Folder from "./components/Folder.vue";
+import Folder from "./components/common/Folder.vue";
+import File from "./components/common/File.vue"
+
+import Header from "@/components/layout/Header";
 
 export default {
   name: "App",
   components: {
-    Folder,
+    Folder, File, Header,
   },
 };
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
