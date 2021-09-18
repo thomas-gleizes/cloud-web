@@ -1,3 +1,15 @@
+<script>
+import Folder from "./components/common/Folder.vue";
+import File from "./components/common/File.vue";
+import Header from "@/components/layout/Header";
+import Card from "./components/layout/Card";
+
+export default {
+  name: "App",
+  components: { Card, Header, Folder, File },
+};
+</script>
+
 <template>
   <Header></Header>
   <main class="w-screen">
@@ -13,23 +25,3 @@
     </div>
   </main>
 </template>
-
-<script>
-import Folder from "./components/common/Folder.vue";
-import File from "./components/common/File.vue";
-
-import Header from "@/components/layout/Header";
-import Card from "./components/layout/Card";
-
-export default {
-  name: "App",
-  components: {
-    Card,
-    Folder, File, Header
-  }
-};
-</script>
-
-<style>
-
-</style>
