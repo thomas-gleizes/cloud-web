@@ -18,7 +18,7 @@ export default {
     }
   },
   methods: {
-    DecreaseTimer () {
+    decreaseTimer () {
       let diff = Math.floor((this.limitDate.getTime() - Date.now()) / 1000);
       this.timestampDiff = diff;
 
@@ -44,8 +44,8 @@ export default {
     };
   },
   mounted() {
-    this.DecreaseTimer()
-    this.interval = setInterval(this.DecreaseTimer, 100);
+    this.decreaseTimer()
+    this.interval = setInterval(this.decreaseTimer, 100);
   },
   unmounted() {
     clearInterval(this.interval);
