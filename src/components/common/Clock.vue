@@ -8,7 +8,7 @@ export default {
       interval: null,
       hours: time.getHours(),
       minutes: time.getMinutes(),
-      secondes: time.getSeconds(),
+      secondes: time.getSeconds()
     };
   },
   mounted() {
@@ -24,13 +24,11 @@ export default {
     clearInterval(this.interval);
   },
   methods: {
-    singleDigit: (digit) => `0${digit}`.slice(-2),
-  },
+    singleDigit: (digit) => `0${digit}`.slice(-2)
+  }
 };
 </script>
 
 <template>
-  <div>
-    <span>{{ singleDigit(hours) }} : {{ singleDigit(minutes) }} : {{ singleDigit(secondes) }} </span>
-  </div>
+  {{ singleDigit(hours) }} : {{ singleDigit(minutes) }} : {{ singleDigit(secondes) }}
 </template>

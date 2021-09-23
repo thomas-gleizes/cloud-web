@@ -16,6 +16,6 @@ export default {
     <div class="text-gray-600">
       <fa icon="file" size="5x" />
     </div>
-    <div>{{ name }}</div>
+    <div class="select-none">{{ name }}</div>
   </div>
 </template>
