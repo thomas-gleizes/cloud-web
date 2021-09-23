@@ -1,6 +1,6 @@
 <script>
 import TabsBar from "@/components/layout/navigation/TabsBar";
-import Clock from "../common/Clock";
+import Clock from "@/components/common/Clock";
 
 export default {
   name: "Header",
