@@ -18,6 +18,18 @@ export default {
     }
   },
   methods: {
+    DecreaseTimer () {
+      let diff = Math.floor((this.limitDate.getTime() - Date.now()) / 1000);
+      this.timestampDiff = diff;
+
+      this.days = Math.floor(diff / DAY);
+      diff -= this.days * DAY;
+      this.hours = Math.floor(diff / HOUR);
+      diff -= this.hours * HOUR;
+      this.minutes = Math.floor(diff / MINUTE);
+      diff -= this.minutes * MINUTE;
+      this.secondes = Math.floor(diff / SECOND)
+    },
     singleDigit: (value) => `0${value}`.slice(-2),
     format: (date) => moment(date).format("DD/MM/YYYY")
   },
@@ -32,18 +44,8 @@ export default {
     };
   },
   mounted() {
-    this.interval = setInterval(() => {
-      let diff = Math.floor((this.limitDate.getTime() - Date.now()) / 1000);
-      this.timestampDiff = diff;
-
-      this.days = Math.floor(diff / DAY);
-      diff -= Math.floor(Math.floor((diff / DAY)));
-      this.hours = Math.floor(Math.floor(diff / HOUR) * 24 / 100);
-      diff -= Math.floor(diff / HOUR);
-      this.minutes = Math.floor(Math.floor(diff / MINUTE) * 60 / 100);
-      diff -= Math.floor(diff / MINUTE);
-      this.secondes = Math.floor(Math.floor(diff / SECOND) * 60 / 100);
-    }, 100);
+    this.DecreaseTimer()
+    this.interval = setInterval(this.DecreaseTimer, 100);
   },
   unmounted() {
     clearInterval(this.interval);

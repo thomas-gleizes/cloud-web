@@ -9,7 +9,7 @@ export default {
   components: { TimeTo, Header, Folder, File },
   data() {
     return {
-      limitDate: new Date('2021-09-24 00:00:00')
+      limitDate: new Date('2022-01-01 00:00:00')
     }
   }
 };
