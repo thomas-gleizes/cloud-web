@@ -30,5 +30,5 @@ export default {
 </script>
 
 <template>
-  {{ singleDigit(hours) }} : {{ singleDigit(minutes) }} : {{ singleDigit(secondes) }}
+  {{ singleDigit(hours) }}:{{ singleDigit(minutes) }}:{{ singleDigit(secondes) }}
 </template>
