@@ -19,8 +19,11 @@ export default {
         <h2 class="text-2xl mx-5 font-bold text-green-600 italic my-auto">Cloud web</h2>
       </div>
       <div class="flex justify-end my-auto px-4 text-lg">
-        <span class="font-bold">
-          <Clock />
+        <span class="flex font-bold select-none">
+          <i class="mr-2">
+            <fa icon="clock" />
+          </i>
+          <clock />
         </span>
       </div>
     </div>

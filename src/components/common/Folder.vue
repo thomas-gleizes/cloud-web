@@ -5,19 +5,19 @@ export default {
     name: {
       type: String,
       required: true,
-      default: null,
-    },
+      default: null
+    }
   },
   data() {
     return {
-      icon: "folder",
+      icon: "folder"
     };
   },
   methods: {
     toggleHover(icon) {
       this.icon = icon;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -27,9 +27,11 @@ export default {
     @mouseenter="toggleHover('folder-open')"
     @mouseleave="toggleHover('folder')"
   >
-    <div class="text-blue-500">
-      <fa v-bind:icon="icon" size="5x" />
+    <div>
+      <div class="text-blue-500">
+        <fa v-bind:icon="icon" size="5x" />
+      </div>
+      <div class="select-none">{{ name }}</div>
     </div>
-    <div class="select-none">{{ name }}</div>
   </div>
 </template>

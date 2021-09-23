@@ -5,16 +5,18 @@ export default {
     name: {
       type: String,
       required: true,
-      default: null,
-    },
-  },
+      default: null
+    }
+  }
 };
 </script>
 
 <template>
-  <div class="border-2 m-2 py-2 w-36 rounded text-center cursor-pointer">
+  <div
+    class="border-2 m-2 py-2 w-36 rounded text-center cursor-pointer transform transition hover:scale-110 duration-200"
+  >
     <div class="text-gray-600">
-      <fa icon="file" size="5x" />
+      <fa icon="file-code" size="5x" />
     </div>
     <div class="select-none">{{ name }}</div>
   </div>
